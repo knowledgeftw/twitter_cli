@@ -16,7 +16,7 @@ if not os.path.exists(STORED_FILE):
 	
 	token_details = authenticate(get_twitter_urls(), consumer_key, consumer_secret)
 	f = open(STORED_FILE, "w")
-	pickle.dump(f, token_details)
+	pickle.dump(token_details, f)
 	f.close()
 else:
 	f = open(STORED_FILE, "r")
